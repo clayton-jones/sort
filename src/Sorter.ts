@@ -1,14 +1,12 @@
 // potential interface structure?
 export interface Sortable {
-  swap(i: number, j: number): void;
-  compare(i: number, j: number): boolean;
+  swap(leftIdx: number, rightIdx: number): void;
+  compare(leftIdx: number, rightIdx: number): boolean;
   length: number;
 }
 
-import { NumbersCollection } from './NumbersCollection';
-
 export class Sorter {
-  constructor(public collection: NumbersCollection) {}
+  constructor(public collection: Sortable) {}
 
   sort(): void {
     const { length } = this.collection;
