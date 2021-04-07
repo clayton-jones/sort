@@ -76,6 +76,6 @@ export class LinkedList extends Sorter {
 
     str += 'null';
 
-    console.log(str, 'HELLO');
+    console.log(str);
   }
 }
