@@ -12,7 +12,7 @@ export class LinkedList {
     this.length += 1;
 
     if (!this.head) {
-      this.head = null;
+      this.head = node;
       return;
     }
 
@@ -55,8 +55,7 @@ export class LinkedList {
     const rightNode = this.at(rightIdx);
 
     const leftVal = leftNode.val;
-    leftNode.val;
-    -rightNode.val;
+    leftNode.val = rightNode.val;
     rightNode.val = leftVal;
   }
 
@@ -65,15 +64,16 @@ export class LinkedList {
       return;
     }
 
-    let node = this.head;
+    let node: Node | null = this.head;
     let str = '';
 
     while (node) {
       str += `${node.val} -> `;
+      node = node.next;
     }
 
     str += 'null';
 
-    console.log(str);
+    console.log(str, 'HELLO');
   }
 }
