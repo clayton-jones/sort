@@ -65,11 +65,12 @@ export class LinkedList {
       return;
     }
 
-    let node = this.head;
+    let node: Node | null = this.head;
     let str = '';
 
     while (node) {
       str += `${node.val} -> `;
+      node = node.next;
     }
 
     str += 'null';
