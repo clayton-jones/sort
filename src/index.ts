@@ -17,8 +17,6 @@ list.add(-10);
 list.add(-3000);
 list.add(2);
 
-const sorter = new Sorter(list);
-
-sorter.sort();
+list.sort();
 
 list.print();
